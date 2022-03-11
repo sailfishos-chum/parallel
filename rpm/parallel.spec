@@ -37,12 +37,18 @@ often be used as a substitute for xargs or cat | bash.
 %if "%{?vendor}" == "chum"
 PackageName: GNU parallel
 Type: console-application
+DeveloperName: Free Software Foundation
 PackagerName: nephros
 Categories:
  - Utility
+Custom:
+  PackagingRepo: https://github.com/nephros/parallel
+  Repo: https://git.savannah.gnu.org/git/parallel.git
 Icon: https://www.gnu.org/software/parallel/logo-gray+black300.png
 Url:
   Homepage: https://www.gnu.org/software/parallel
+  Help: https://www.gnu.org/software/parallel/parallel.html
+  Donations: https://my.fsf.org/donate
 %endif
 
 %prep
