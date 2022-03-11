@@ -8,6 +8,7 @@ URL:        https://www.gnu.org/software/parallel
 Source0:    http://ftp.gnu.org/gnu/%{name}/%{name}-%{version}.tar.bz2
 BuildArch:  noarch
 BuildRequires: autoconf
+BuildRequires: automake
 BuildRequires: make
 
 %description
@@ -55,6 +56,7 @@ Url:
 %setup -q -n %{name}-%{version}/upstream
 
 %build
+autoreconf --install -W gnu
 %configure --disable-documentation
 %make_build
 
