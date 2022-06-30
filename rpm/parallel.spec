@@ -43,7 +43,7 @@ PackagerName: nephros
 Categories:
  - Utility
 Custom:
-  PackagingRepo: https://github.com/nephros/parallel
+  PackagingRepo: https://github.com/sailfishos-chum/parallel
   Repo: https://git.savannah.gnu.org/git/parallel.git
 Icon: https://www.gnu.org/software/parallel/logo-gray+black300.png
 Url:
