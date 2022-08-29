@@ -52,6 +52,31 @@ Url:
   Donations: https://my.fsf.org/donate
 %endif
 
+%package shell-completion
+Summary: %{name} completion files for bash and zsh
+
+%description shell-completion
+%{summary}.
+
+%if "%{?vendor}" == "chum"
+PackageName: parallel completion files
+Type: addon
+DeveloperName: Free Software Foundation
+PackagerName: nephros
+Categories:
+ - Utility
+ - Other
+Custom:
+  PackagingRepo: https://github.com/sailfishos-chum/parallel
+  Repo: https://git.savannah.gnu.org/git/parallel.git
+Icon: https://www.gnu.org/software/parallel/logo-gray+black300.png
+Url:
+  Homepage: https://www.gnu.org/software/parallel
+  Help: https://www.gnu.org/software/parallel/parallel.html
+  Donations: https://my.fsf.org/donate
+%endif
+
+
 %prep
 %setup -q -n %{name}-%{version}/upstream
 
@@ -68,5 +93,8 @@ rm -rf %{buildroot}%{_mandir}/
 
 %files
 %defattr(-,root,root,-)
-/usr/bin/*
+%{_bindir}/*
 
+%files shell-completion
+%{_datadir}/bash-completion/completions/parallel
+%{_datadir}/zsh/site-functions/_parallel
